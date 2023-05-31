@@ -38,9 +38,9 @@ services:
       - scrum-postgres
 
   #Fron-end Angular Application
-  scrum-ui:
-    build: ./scrum-ui
-    container_name: scrum-ui
+  kui:
+    build: ./kui
+    container_name: kui
     ports:
       - 4200:80
     links:
