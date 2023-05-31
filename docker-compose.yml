@@ -21,10 +21,10 @@ services:
       - POSTGRES_PASSWORD=scrum
 
   #Back-end Spring Boot Application
-  scrum-app:
-    #The docker file in scrum-app build the jar and provides the docker image with the following name.
-    build: ./scrum-app
-    container_name: scrum-app
+  app-api:
+    #The docker file in app-api build the jar and provides the docker image with the following name.
+    build: ./app-api
+    container_name: app-api
 
     #Environment variables for Spring Boot Application.
     environment:
@@ -44,7 +44,7 @@ services:
     ports:
       - 4200:80
     links:
-      - scrum-app
+      - app-api
 
 #Volumes for DB data
 volumes:
