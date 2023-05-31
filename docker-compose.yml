@@ -6,13 +6,13 @@ services:
 
   #PostgreSQL Database for the application
   scrum-postgres:
-    image: "postgres:9.6-alpine"
+    image: "postgres"
     container_name: scrum-postgres
     #Volume mounted for database for the storage
     volumes:
       - scrum-data:/var/lib/postgresql/data
     ports:
-      - 5432:5432 # Forward the exposed port 5432 on the container to port 5432 on the host machine
+      - 5432:5432
 
     #Environment variable for DB name, user and password
     environment:
@@ -33,7 +33,7 @@ services:
       - POSTGRES_USER=scrum
       - POSTGRES_PASSWORD=scrum
     ports:
-      - 8080:8080 # Forward the exposed port 8080 on the container to port 8080 on the host machine
+      - 8080:8080
     links:
       - scrum-postgres
 
