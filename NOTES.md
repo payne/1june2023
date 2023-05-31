@@ -26,3 +26,8 @@ Will I fix it or get something else to build upon?
 
 
 
+
+#####
+
+30 May 2023 at 20:22 Omaha time: `docker compose up -d` now works.
+
